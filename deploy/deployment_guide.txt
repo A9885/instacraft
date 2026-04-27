@@ -1,0 +1,31 @@
+# Ishta Crafts — cPanel Deployment Guide
+
+This package was generated on 15 April 2026 for deployment on cPanel.
+
+## Prerequisites
+1.  **Node.js**: Ensure Node.js (version 18+) is enabled in your cPanel "Setup Node.js App" section.
+2.  **MySQL/MariaDB**: Create a database and user in cPanel MySQL Databases.
+
+## Deployment Steps
+1.  **Extract Files**: Upload `ishtacrafts_deploy.zip` to your domain's folder (e.g., `public_html/ishtacrafts`) and extract it.
+2.  **Database Import**:
+    -   Go to **phpMyAdmin** in cPanel.
+    -   Select your database.
+    -   Click **Import** and select the `ishtacrafts_db.sql` file included in this folder.
+3.  **Configure Environment**:
+    -   Open the `.env` file in the File Manager.
+    -   Update the `DATABASE_URL` with your cPanel database details:
+        `mysql://DB_USER:DB_PASSWORD@127.0.0.1:3306/DB_NAME?allowPublicKeyRetrieval=true`
+4.  **Setup Node.js App**:
+    -   In cPanel, go to **Setup Node.js App**.
+    -   Click **Create Application**.
+    -   **Node.js version**: 18.x or higher.
+    -   **Application mode**: Production.
+    -   **Application root**: The path where you extracted the files (e.g., `/public_html/ishtacrafts`).
+    -   **Application URL**: Your domain or subdomain.
+    -   **Application startup file**: `server.js`.
+    -   Click **Create**.
+5.  **Restart**: Once created, click "Restart" on the Node.js app.
+
+## Support
+The `server.js` has been pre-configured to automatically load your `.env` file settings. The Prisma client has been pre-generated with Linux compatibility binaries.

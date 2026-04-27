@@ -1,0 +1,32 @@
+{
+  "name": "handicrafts-new",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "deploy:prep": "rm -rf .next dist-cpanel && npm run build && mkdir -p dist-cpanel && cp -rv .next dist-cpanel/ && cp -rv public dist-cpanel/ && cp -rv scripts dist-cpanel/ && cp -rv src dist-cpanel/ && cp package.json dist-cpanel/package.json && cp server.js dist-cpanel/server.js && cp firebase.json dist-cpanel/firebase.json && (cp .env dist-cpanel/.env || cp .env.local dist-cpanel/.env || echo 'No env found')",
+    "start": "NODE_ENV=production node server.js",
+    "prisma:gen": "prisma generate",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "firebase": "^12.11.0",
+    "firebase-admin": "^13.7.0",
+    "framer-motion": "^12.38.0",
+    "gsap": "^3.15.0",
+    "lucide-react": "^1.7.0",
+    "mysql2": "^3.22.0",
+    "next": "16.2.1",
+    "razorpay": "^2.9.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-phone-number-input": "^3.4.16",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "babel-plugin-react-compiler": "1.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.1"
+  }
+}

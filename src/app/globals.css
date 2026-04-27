@@ -1,0 +1,46 @@
+/* ============================================================
+   GLOBALS — Central import hub for all CSS modules
+   Google Fonts are loaded in layout.jsx via next/font or <link>
+   ============================================================ */
+
+@import '../styles/variables.css';
+@import '../styles/typography.css';
+@import '../styles/layout.css';
+@import '../styles/components.css';
+@import '../styles/utilities.css';
+
+/* ── CUSTOM SCROLLBARS ── */
+/* Modern, themed scrollbars for all scrollable elements */
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) transparent;
+}
+
+/* Chrome, Edge, Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(122, 31, 31, 0.4);
+  /* Transparent primary */
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary);
+}
+
+/* Optional: Subtle background for the main page track on hover */
+body::-webkit-scrollbar-track:hover {
+  background: var(--surface-sunken);
+}

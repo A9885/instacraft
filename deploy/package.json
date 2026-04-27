@@ -1,0 +1,31 @@
+{
+  "name": "handicrafts-new",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@prisma/adapter-mariadb": "^7.7.0",
+    "@prisma/client": "^7.7.0",
+    "firebase": "^12.11.0",
+    "firebase-admin": "^13.7.0",
+    "lucide-react": "^1.7.0",
+    "mariadb": "^3.5.2",
+    "next": "16.2.1",
+    "razorpay": "^2.9.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-phone-number-input": "^3.4.16",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "babel-plugin-react-compiler": "1.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.1",
+    "prisma": "^7.7.0"
+  }
+}

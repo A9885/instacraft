@@ -1,0 +1,267 @@
+/* ── Container ── */
+.container {
+  max-width: 420px;
+  margin: 50px auto;
+  padding: 36px 32px;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--auth-text);
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--auth-text-muted);
+  margin-bottom: 24px;
+}
+
+/* ── Step Sections ── */
+.stepSection {
+  background: var(--auth-bg-field);
+  border: 1px solid var(--auth-border-faint);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.stepLabel {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--auth-accent);
+  margin: 0 0 10px 0;
+}
+
+/* ── Tabs ── */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.tab {
+  flex: 1;
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1.5px solid var(--auth-border);
+  background: white;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--auth-text-medium);
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.tab:hover {
+  border-color: var(--auth-accent);
+  color: var(--auth-accent);
+}
+
+.tabActive {
+  background: var(--auth-accent);
+  border-color: var(--auth-accent);
+  color: white;
+  font-weight: 600;
+}
+
+/* ── Method section ── */
+.methodSection {
+  animation: fadeIn 0.18s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Inputs ── */
+.inputGroup {
+  margin-bottom: 10px;
+}
+
+.input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid var(--auth-border);
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: var(--auth-text);
+  transition: border-color 0.2s;
+  background: white;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--auth-accent);
+}
+
+.passwordWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.passwordWrapper .input {
+  padding-right: 46px;
+}
+
+.passwordToggle {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: var(--auth-text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  transition: color 0.2s;
+  z-index: 2;
+}
+
+.passwordToggle:hover {
+  color: var(--auth-accent);
+}
+
+/* ── Phone Input ── */
+.phoneWrapper {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.phoneInput {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.phoneInput input {
+  flex: 1;
+  padding: 11px 14px;
+  border: 1.5px solid var(--auth-border);
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+}
+
+.phoneInput input:focus {
+  outline: none;
+  border-color: var(--auth-accent);
+}
+
+/* ── OTP ── */
+.otpSection {
+  text-align: left;
+}
+
+.otpHint {
+  font-size: 13px;
+  color: var(--auth-text-medium);
+  margin: 0 0 10px 0;
+}
+
+.resendBtn {
+  background: none;
+  border: none;
+  color: var(--auth-text-muted);
+  font-size: 13px;
+  cursor: pointer;
+  padding: 6px 0;
+  margin-top: 4px;
+}
+
+.resendBtn:hover {
+  color: var(--auth-accent);
+}
+
+/* ── Primary Button ── */
+.button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--auth-accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: background-color 0.2s, transform 0.1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.button:hover {
+  background-color: var(--auth-accent-hover);
+}
+
+.button:active {
+  transform: scale(0.99);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ── Google Button ── */
+.buttonGoogle {
+  background-color: white;
+  color: var(--auth-label);
+  border: 1.5px solid var(--auth-border);
+  margin-top: 0;
+}
+
+.buttonGoogle:hover {
+  background-color: var(--auth-bg-disabled);
+  border-color: var(--auth-border-disabled);
+}
+
+/* ── Divider ── */
+.divider {
+  margin: 20px 0;
+  border-bottom: 1px solid var(--auth-divider);
+  position: relative;
+}
+
+.dividerText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 0 10px;
+  color: var(--auth-text-faint);
+  font-size: 12px;
+}
+
+/* ── Link ── */
+.link {
+  display: block;
+  margin-top: 16px;
+  color: var(--auth-text-medium);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.link strong {
+  color: var(--auth-accent);
+}
+
+.link:hover strong {
+  text-decoration: underline;
+}

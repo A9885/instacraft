@@ -1,0 +1,183 @@
+/* ============================================================
+   DESIGN TOKENS — Single source of truth for the entire app
+   ============================================================ */
+
+:root {
+  /* ── Brand Colors ── */
+  --primary: #7A1F1F;
+  /* Deep crimson — heritage, craft */
+  --primary-light: #A8403F;
+  --primary-dark: #5A1515;
+
+  --secondary: #C69C3F;
+  /* Antique gold — artisan luxury */
+  --secondary-light: #D4AE5A;
+  --secondary-dark: #9E7B2E;
+
+  --accent: #2F5D50;
+  /* Forest green — earthy balance */
+  --accent-light: #3D7A69;
+  --accent-dark: #1E4038;
+
+  /* ── Surfaces ── */
+  --background: #FDF6EC;
+  /* Warm parchment */
+  --surface: #FFF8F0;
+  /* Card / panel bg */
+  --surface-raised: #FFFDF9;
+  --surface-sunken: #F5ECD9;
+
+  /* ── Text ── */
+  --text-dark: #2B2B2B;
+  --text-medium: #4A4A4A;
+  --text-light: #6E6E6E;
+  --text-muted: #9A9080;
+  --text-on-primary: #FFFDF9;
+  --text-on-dark: #F5ECD9;
+
+  /* ── Borders ── */
+  --border-color: #E8D9C0;
+  --border-light: #F0E5CF;
+  --border-dark: #C9B08A;
+  --border-radius: 8px;
+  --border-radius-sm: 4px;
+  --border-radius-lg: 8px;
+  --border-radius-xl: 20px;
+  --border-radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-xs: 0 1px 3px rgba(122, 31, 31, 0.06);
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.10);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.12);
+  --shadow-glow: 0 0 20px rgba(198, 156, 63, 0.25);
+
+  /* ── Typography ── */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Lora', serif;
+  --font-accent: 'Kalam', cursive;
+  --font-mono: 'Courier New', monospace;
+
+  /* ── Font Sizes (strict 13px–36px) ── */
+  --fs-36: 2.25rem;
+  /* 36px — heading-xl */
+  --fs-32: 2rem;
+  /* 32px — heading-lg */
+  --fs-28: 1.75rem;
+  /* 28px — heading-lg min */
+  --fs-24: 1.5rem;
+  /* 24px — heading-md */
+  --fs-22: 1.375rem;
+  /* 22px — heading-md min */
+  --fs-20: 1.25rem;
+  /* 20px — heading-sm */
+  --fs-18: 1.125rem;
+  /* 18px — subheading */
+  --fs-16: 1rem;
+  /* 16px — body */
+  --fs-15: 0.9375rem;
+  /* 15px — body-sm */
+  --fs-14: 0.875rem;
+  /* 14px — text-small */
+  --fs-13: 0.8125rem;
+  /* 13px — text-muted / min */
+
+  /* ── Font Weights ── */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* ── Line Heights ── */
+  --lh-tight: 1.25;
+  --lh-snug: 1.4;
+  --lh-normal: 1.6;
+  --lh-loose: 1.8;
+
+  /* ── Spacing Scale ── */
+  --space-1: 4px;
+  --space-2: 8px;
+  /* xs */
+  --space-3: 12px;
+  /* sm */
+  --space-4: 16px;
+  /* md */
+  --space-5: 20px;
+  --space-6: 24px;
+  /* lg */
+  --space-8: 32px;
+  --space-10: 40px;
+  /* xl */
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* ── Layout ── */
+  --container-max: 1280px;
+  --container-xl: 1500px;
+  --container-md: 960px;
+  --container-sm: 640px;
+  --navbar-height: 70px;
+  --sidebar-width: 260px;
+  --sidebar-collapsed: 70px;
+
+  /* ── Transitions ── */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+  --transition-bounce: 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Z-index Scale ── */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+
+  /* ── Status Colors ── */
+  --success: #2D7A4F;
+  --warning: #C28A1A;
+  --error: #A8403F;
+  --info: #2F5D50;
+
+  --success-bg: #E8F5EE;
+  --warning-bg: #FEF5E0;
+  --warning-border: #EDC287;
+  --error-bg: #FBE9E9;
+  --info-bg: #E3EFED;
+
+  /* ── Extended Status ── */
+  --success-text: #1E7E34;
+  --error-text: #D9534F;
+  --neutral-bg: #F5F5F5;
+  --neutral-text: #9E9E9E;
+  --surface-white: #FFFFFF;
+  --black: #000000;
+  --red-500: #EF4444;
+  --warning-text: #B06000;
+  --surface-table-header: #F9FAFC;
+  --neutral-border: #CCCCCC;
+  --wholesale-bg: #F8EBFF;
+  --whatsapp: #25D366;
+  --whatsapp-hover: #30A425;
+  --text-hint: #ADA28F;
+  --filter-clear: #A0522D;
+
+  /* ── Auth Form Colors ── */
+  --auth-accent: #F6921E;
+  --auth-accent-hover: #E5871B;
+  --auth-text: #1A1A1A;
+  --auth-text-medium: #555555;
+  --auth-text-muted: #888888;
+  --auth-text-faint: #AAAAAA;
+  --auth-border: #E0E0E0;
+  --auth-bg-alt: #F5F5F5;
+  --auth-bg-hover: #ECECEC;
+  --auth-bg-field: #FAFAFA;
+  --auth-bg-disabled: #F8F8F8;
+  --auth-border-disabled: #CCCCCC;
+  --auth-border-faint: #EFEFEF;
+  --auth-divider: #EEEEEE;
+  --auth-label: #333333;
+}
